@@ -103,7 +103,8 @@ public class Planet {
          * planet to accelerate, and the resulting change in the planet's velocity and position in 
          * a small period of time dt.
          */
-        double aX, aY;
+        double aX;
+        double aY;
         aX = fX / this.mass;
         aY = fY / this.mass;
         this.xxVel = this.xxVel + aX * dt;
@@ -115,7 +116,7 @@ public class Planet {
      * uses the StdDraw API mentioned above to draw the Body's image at the BOdy's position.
      */
     public void draw(){
-        StdDraw.picture(this.xxPos/1e+11, this.yyPos/1e+11, "images/"+ this.imgFileName);
+        StdDraw.picture(this.xxPos, this.yyPos, "images/"+ this.imgFileName);
     }
 
     }

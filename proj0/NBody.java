@@ -49,8 +49,7 @@ public class NBody {
                 planets[i].update(dt, xForce[i], yForce[i]);
             }
 
-        StdDraw.setXscale((-1 * radius / 1e+11), radius / 1e+11); // set the scale of the universe.
-        StdDraw.setYscale((-1 * radius / 1e+11), radius / 1e+11);
+        StdDraw.setScale(-radius, radius);
         StdDraw.clear();
         StdDraw.picture(0, 0, starfield);  // set the background.
         for(int i = 0; i < planets.length; i++){
